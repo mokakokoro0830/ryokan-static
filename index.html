@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>月詠 Tsukuyomi | A Hidden Ryokan in Shinshu — 信州の隠れ家旅館</title>
+<meta name="description" content="A century-old hidden ryokan nestled in the mountains of Shinshu. Eight rooms, private hot springs, seasonal kaiseki cuisine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Vertical Haiku Telop -->
+<aside class="haiku-telop" id="haiku" aria-hidden="true">
+  <div class="haiku-frame">
+    <p class="haiku-text" id="haiku-text">山深く<br>月の湯けむり<br>ほどけけり</p>
+    <p class="haiku-author" id="haiku-author">― 月詠</p>
+  </div>
+</aside>
+
+<header class="hd" id="hd">
+  <div class="wrap hd__row">
+    <a href="#" class="hd__logo">月詠<small>TSUKUYOMI · est. 1923</small></a>
+    <nav class="hd__nav">
+      <a href="#concept"><span class="nav-jp">こころざし</span><span class="nav-en">Philosophy</span></a>
+      <a href="#rooms"><span class="nav-jp">客室</span><span class="nav-en">Rooms</span></a>
+      <a href="#cuisine"><span class="nav-jp">お料理</span><span class="nav-en">Cuisine</span></a>
+      <a href="#onsen"><span class="nav-jp">温泉</span><span class="nav-en">Onsen</span></a>
+      <a href="#garden"><span class="nav-jp">四季</span><span class="nav-en">Seasons</span></a>
+    </nav>
+    <a href="#book" class="hd__cta">ご予約 / Reserve</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__img" style="background-image:url('images/hero-rotenburo.jpg')"></div>
+  <div class="hero__inner">
+    <div class="hero__col">
+      <p class="hero__sub">― A hidden ryokan in the mountains of Shinshu ―</p>
+      <h1 class="hero__title">月光に、<em>抱かれて</em>。</h1>
+      <p class="hero__en">Embraced by Moonlight.</p>
+      <p class="hero__lead">
+        信州の山あいに、八つの灯がしずかに燈る。<br>
+        渓谷を渡る風、湯けむりにほどける月。<br>
+        ここでしか過ごせない、夜があります。
+      </p>
+      <p class="hero__lead-en">
+        Eight lanterns, glowing softly in the valleys of Shinshu.<br>
+        A wind through the gorge, a moon dissolving in the steam of the bath.<br>
+        Some nights can only be spent here.
+      </p>
+      <div class="hero__meta">
+        <div><span>Est. 1923</span><b>大正十二年創業</b></div>
+        <div><span>Eight Rooms</span><b>全 八 室</b></div>
+        <div><span>Shinshu, Nagano</span><b>長野・信州</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll">SCROLL ／ 下へ</div>
+</section>
+
+<!-- CONCEPT -->
+<section class="concept" id="concept">
+  <div class="concept__inner">
+    <h2 class="concept__vtitle">月のしらべ、<br>湯のいぶき。</h2>
+    <div class="concept__body">
+      <p class="kicker" style="margin-bottom:18px">― Philosophy ／ こころざし</p>
+      <p>
+        山ふところに抱かれた古き宿。創業より百年、私どもは「一夜に、一生の静けさを」という想いひとつで、暖簾を守り続けてまいりました。
+      </p>
+      <p class="en">
+        For a century since our founding, we have kept this old inn alive with a single wish: <em>to offer, in a single night, the stillness of a lifetime.</em>
+      </p>
+      <p>
+        飾り立てぬしつらえ、地の素材だけで仕立てる会席、源泉かけ流しの湯。それは贅を尽くすことではなく、ただ一夜、お客様の時間を澄ませるためのもの。
+      </p>
+      <p class="en">
+        Unadorned interiors, kaiseki crafted only from the bounty of these mountains, and natural hot spring water flowing freely from the source — none of it is luxury for its own sake. It exists only to clarify the hours of your stay.
+      </p>
+      <p>
+        日が落ちて、月が湯に映るころ。どうぞ、すべてを置いて、お越しください。
+      </p>
+      <div class="concept__sign">
+        ― 七代目 主人<b>月村 咲也<i>Sakuya Tsukimura, 7th-generation owner</i></b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="sec rooms" id="rooms">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="kicker">― Guest Rooms ／ 客室のしつらえ</p>
+      <h2 class="sec__title">月の名を冠する、八つの間</h2>
+      <p class="sec__sub">— Eight rooms, each named after a phase of the moon —</p>
+      <p class="sec__lead">
+        全八室、すべてに異なる景色を。露天風呂付き特別室から、本間と次の間を備えた本格和室まで。<br>
+        いずれの部屋も、一棟一棟に名月の名を冠しております。
+      </p>
+    </div>
+
+    <div class="rooms__grid">
+      <article class="room">
+        <div class="room__img"><img src="images/room-mochizuki.jpg" alt="望月の間"></div>
+        <div class="room__body">
+          <p class="room__cat">特別室 ／ Premier Suite</p>
+          <h3 class="room__name">望月<em>Mochizuki</em></h3>
+          <p class="room__desc">露天風呂付き特別室。檜風呂と十二畳の本間、四畳半の次の間。窓の向こうに渓谷の四季を望む、最上のしつらえ。</p>
+          <p class="room__desc-en"><em>Premier suite with private hinoki cypress open-air bath, 12-mat main room and 4.5-mat anteroom, overlooking the valley.</em></p>
+          <div class="room__meta">
+            <div class="room__price">¥98,000<small>/night · 2 guests, breakfast & dinner</small></div>
+            <span class="room__cap">～4 GUESTS</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="room">
+        <div class="room__img"><img src="images/room-gengetsu.jpg" alt="弦月の間"></div>
+        <div class="room__body">
+          <p class="room__cat">上級和室 ／ Deluxe</p>
+          <h3 class="room__name">弦月<em>Gengetsu</em></h3>
+          <p class="room__desc">十畳の本間に半露天の信楽焼陶器風呂を備えた角部屋。月の出を寝そべったまま望めるよう、東向きに設えました。</p>
+          <p class="room__desc-en"><em>East-facing corner room, 10-mat main with semi-outdoor Shigaraki ceramic bath. Watch the moonrise from your futon.</em></p>
+          <div class="room__meta">
+            <div class="room__price">¥72,000<small>/night · 2 guests, breakfast & dinner</small></div>
+            <span class="room__cap">～3 GUESTS</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="room">
+        <div class="room__img"><img src="images/room-washitsu.jpg" alt="新月の間"></div>
+        <div class="room__body">
+          <p class="room__cat">本間和室 ／ Standard</p>
+          <h3 class="room__name">新月<em>Shingetsu</em></h3>
+          <p class="room__desc">八畳の本間と縁側。庭の灯籠を独り占めにする、もっとも静かな一室。お一人様にも好まれます。</p>
+          <p class="room__desc-en"><em>An 8-mat room with engawa veranda, overlooking a stone lantern in the garden. The quietest room — favored by solo travelers.</em></p>
+          <div class="room__meta">
+            <div class="room__price">¥48,000<small>/night · 2 guests, breakfast & dinner</small></div>
+            <span class="room__cap">～2 GUESTS</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CUISINE -->
+<section class="cuisine" id="cuisine">
+  <div class="cuisine__layout">
+    <div class="cuisine__img" style="background-image:url('images/kaiseki.jpg')"></div>
+    <div class="cuisine__copy">
+      <p class="kicker">― Kaiseki ／ お料理</p>
+      <h2>月夜の会席</h2>
+      <p class="sec__sub" style="margin-bottom:24px">— A Kaiseki Beneath the Moon —</p>
+      <p>
+        信州の山菜、戸隠の蕎麦、安曇野の岩魚。料理長 久保田は、地のものだけで一献の月を仕立てます。
+      </p>
+      <p class="en">
+        Mountain herbs of Shinshu, Togakushi soba, char from Azumino. Chef Kubota composes each course only from what these mountains and rivers offer.
+      </p>
+      <p>
+        献立はその日の朝、料理長が市場と山を歩いて決めるため、二度として同じものはございません。
+      </p>
+      <ul class="menu">
+        <li><span>先付</span><em>Sakizuke · Appetizer</em></li>
+        <li><span>椀物・八寸</span><em>Wanmono & Hassun · Soup, Seasonal Plate</em></li>
+        <li><span>造里</span><em>Tsukuri · Sashimi</em></li>
+        <li><span>焼物・煮物</span><em>Yakimono & Nimono · Grilled, Simmered</em></li>
+        <li><span>強肴・食事</span><em>Shusai · Main Course</em></li>
+        <li><span>水物</span><em>Mizumono · Dessert</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ONSEN -->
+<section class="onsen" id="onsen" style="background-image:url('images/onsen-interior.jpg')">
+  <div class="onsen__copy">
+    <p class="kicker">― Onsen ／ 温泉</p>
+    <h2>月を、湯にうつす。</h2>
+    <p class="sec__sub" style="color:var(--gold-l);margin-bottom:24px">— The Moon, Reflected in the Bath —</p>
+    <p>
+      源泉かけ流しの単純硫黄泉。檜の内湯と石組みの露天、貸切風呂を二つ。<br>
+      夜更けの湯に映る、ひと刷毛の月をどうぞ。
+    </p>
+    <p class="en">
+      Free-flowing simple sulfur spring, drawn directly from the source.<br>
+      An indoor hinoki bath, a stone-rimmed open-air bath, and two private baths await.
+    </p>
+  </div>
+</section>
+
+<!-- GARDEN — Seasonal Switcher -->
+<section class="sec garden" id="garden" data-season="autumn">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="kicker">― The Four Seasons ／ 四季の景色</p>
+      <h2 class="sec__title">庭と、めぐる季節</h2>
+      <p class="sec__sub">— Garden, and the Turning Seasons —</p>
+      <p class="sec__lead">
+        季節をお選びください。当館の庭は、四季のしらべに合わせて、その装いを変えてまいります。<br>
+        <em style="color:var(--gold-d);font-style:italic">Choose a season — our garden wears a different gown for each.</em>
+      </p>
+    </div>
+
+    <div class="season-tabs" role="tablist">
+      <button class="st" data-season="spring" role="tab"><span class="st__jp">春</span><span class="st__en">Spring</span><span class="st__copy">山桜</span></button>
+      <button class="st" data-season="summer" role="tab"><span class="st__jp">夏</span><span class="st__en">Summer</span><span class="st__copy">蛍火</span></button>
+      <button class="st is-active" data-season="autumn" role="tab"><span class="st__jp">秋</span><span class="st__en">Autumn</span><span class="st__copy">紅葉</span></button>
+      <button class="st" data-season="winter" role="tab"><span class="st__jp">冬</span><span class="st__en">Winter</span><span class="st__copy">雪明かり</span></button>
+    </div>
+
+    <div class="season-stage" id="season-stage">
+      <div class="season-img" id="season-img" style="background-image:url('images/season-autumn.jpg')"></div>
+      <div class="season-copy">
+        <p class="season-eyebrow" id="season-eyebrow">秋 ／ Autumn</p>
+        <h3 class="season-title" id="season-title">紅葉、燃えるがごとく</h3>
+        <p class="season-haiku" id="season-haiku">山眠る前の<br>ひと刷毛の朱、<br>湯にゆれる。</p>
+        <p class="season-lead" id="season-lead">
+          十月から十一月、当館の庭は紅葉の盛り。露天風呂のすぐ横まで枝を伸ばす楓が、湯面に朱を落とします。<br>
+          <em>October through November — maples reach to the very edge of the open-air bath, casting crimson onto the water.</em>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book" id="book">
+  <div class="book__inner">
+    <p class="kicker" style="color:var(--gold-l)">― Reservation ／ ご予約</p>
+    <h2>お部屋のご用意</h2>
+    <p class="sec__sub" style="color:var(--gold-l);margin-bottom:32px">— Reserve Your Stay —</p>
+    <p>
+      ご宿泊の希望日をお選びください。当館より折り返しご連絡を差し上げます。<br>
+      <em style="color:rgba(244,236,216,0.6)">Please select your preferred dates. We will contact you to confirm.</em>
+    </p>
+
+    <!-- Moon Phase Display -->
+    <div class="moon-panel" id="moon-panel">
+      <div class="moon-vis">
+        <div class="moon-disk" id="moon-disk"><span class="moon-shadow" id="moon-shadow"></span></div>
+        <div class="moon-glow" id="moon-glow"></div>
+      </div>
+      <div class="moon-info">
+        <p class="moon-label" id="moon-label">月詠の夜空</p>
+        <p class="moon-name" id="moon-name">日付をお選びください</p>
+        <p class="moon-meta" id="moon-meta">Select a date to see the moon phase</p>
+        <p class="moon-quote" id="moon-quote"></p>
+      </div>
+      <div class="moon-next" id="moon-next">
+        <span class="moon-next-label">次の望月 ／ Next Full Moon</span>
+        <b id="next-full-date">―</b>
+        <small id="next-full-rel"></small>
+        <button type="button" class="moon-next-btn" id="pick-full">この日を選ぶ</button>
+      </div>
+    </div>
+
+    <form class="book__form" id="book-form" onsubmit="event.preventDefault();document.getElementById('book-msg').style.display='block';this.reset();document.querySelectorAll('.cs__current').forEach(el=>{el.textContent=el.dataset.placeholder;el.classList.remove('is-filled')});resetMoon();">
+      <input type="date" id="book-date" required>
+
+      <div class="cs" data-name="room">
+        <button type="button" class="cs__current" data-placeholder="― お部屋 / Room ―">― お部屋 / Room ―</button>
+        <ul class="cs__list" role="listbox">
+          <li data-value="望月 Mochizuki（特別室）"><span>望月 <em>Mochizuki</em></span><small>特別室・露天風呂付</small></li>
+          <li data-value="弦月 Gengetsu（上級和室）"><span>弦月 <em>Gengetsu</em></span><small>上級和室・半露天</small></li>
+          <li data-value="新月 Shingetsu（本間和室）"><span>新月 <em>Shingetsu</em></span><small>本間和室・縁側付</small></li>
+        </ul>
+        <input type="hidden" name="room" required>
+      </div>
+
+      <div class="cs" data-name="guests">
+        <button type="button" class="cs__current" data-placeholder="― 人数 / Guests ―">― 人数 / Guests ―</button>
+        <ul class="cs__list" role="listbox">
+          <li data-value="1 名 / 1 guest"><span>一名様</span><small>1 guest</small></li>
+          <li data-value="2 名 / 2 guests"><span>二名様</span><small>2 guests</small></li>
+          <li data-value="3 名 / 3 guests"><span>三名様</span><small>3 guests</small></li>
+          <li data-value="4 名 / 4 guests"><span>四名様</span><small>4 guests</small></li>
+        </ul>
+        <input type="hidden" name="guests" required>
+      </div>
+
+      <input type="text" placeholder="お名前 / Name" required>
+      <input type="email" placeholder="メールアドレス / Email" required>
+      <input type="tel" placeholder="お電話番号 / Phone" required>
+    </form>
+    <button class="btn-gold" onclick="document.getElementById('book-form').requestSubmit()">RESERVE ／ 予約申込</button>
+    <p id="book-msg" style="display:none;color:var(--gold-l);margin-top:32px;font-family:var(--jp-mincho);letter-spacing:0.15em">▸ ご予約リクエストを承りました（デモ）／ Reservation request received (demo)</p>
+    <p class="book__note">※ こちらはポートフォリオデモであり、実際の予約は承っておりません ／ This is a portfolio demo. No actual reservations are processed.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__row">
+      <div class="ft__brand">
+        <a href="#" class="hd__logo">月詠<small>TSUKUYOMI · est. 1923</small></a>
+        <p>信州の山あいに佇む、全八室の隠れ家旅館。創業大正十二年。<br><em>A hidden eight-room ryokan in the mountains of Shinshu, est. 1923.</em></p>
+      </div>
+      <div>
+        <h4>御案内 ／ Contents</h4>
+        <ul>
+          <li><a href="#concept">こころざし · Philosophy</a></li>
+          <li><a href="#rooms">客室 · Rooms</a></li>
+          <li><a href="#cuisine">お料理 · Cuisine</a></li>
+          <li><a href="#onsen">温泉 · Onsen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>所在 ／ Access</h4>
+        <ul>
+          <li>長野県松本市奈川</li>
+          <li>Nagawa, Matsumoto, Nagano</li>
+          <li>0263-XX-XXXX</li>
+          <li>松本駅より送迎60分 ／ 60 min from Matsumoto Sta.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>お便り ／ Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">月詠だより · Journal</a></li>
+          <li><a href="#">季節のご案内 · Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft__bottom">
+      <span>© 2026 御宿 月詠 TSUKUYOMI RYOKAN</span>
+      <span>PORTFOLIO PIECE ／ FICTIONAL BRAND</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hd = document.getElementById('hd');
+  window.addEventListener('scroll', () => {
+    hd.classList.toggle('is-scrolled', window.scrollY > 60);
+  });
+
+  // Custom Select
+  document.querySelectorAll('.cs').forEach(cs => {
+    const btn = cs.querySelector('.cs__current');
+    const list = cs.querySelector('.cs__list');
+    const hidden = cs.querySelector('input[type=hidden]');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      document.querySelectorAll('.cs.is-open').forEach(o => { if (o !== cs) o.classList.remove('is-open'); });
+      cs.classList.toggle('is-open');
+    });
+    list.querySelectorAll('li').forEach(li => {
+      li.addEventListener('click', () => {
+        const val = li.dataset.value;
+        hidden.value = val;
+        btn.innerHTML = li.querySelector('span').innerHTML + ' <small style="opacity:.7;font-family:var(--serif);font-style:italic;font-size:0.75em;letter-spacing:0.08em;margin-left:8px">' + li.querySelector('small').textContent + '</small>';
+        btn.classList.add('is-filled');
+        cs.classList.remove('is-open');
+      });
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.cs.is-open').forEach(o => o.classList.remove('is-open'));
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') document.querySelectorAll('.cs.is-open').forEach(o => o.classList.remove('is-open'));
+  });
+
+  /* === Moon Phase Calendar === */
+  const SYNODIC = 29.53058867;
+  const REF_NEW_MOON_JD = 2451550.1; // 2000-01-06 18:14 UTC
+
+  function dateToJD(d) {
+    return d.getTime() / 86400000 + 2440587.5;
+  }
+  function moonPhase(date) {
+    const phase = (((dateToJD(date) - REF_NEW_MOON_JD) / SYNODIC) % 1 + 1) % 1;
+    return phase; // 0..1
+  }
+  function illumination(phase) {
+    return Math.round((1 - Math.cos(phase * 2 * Math.PI)) / 2 * 100);
+  }
+
+  const PHASES = [
+    {min:0.000, max:0.030, name:'新月',     en:'New Moon',         poem:'闇に沈む夜、星のしらべに耳を澄ませて。'},
+    {min:0.030, max:0.220, name:'三日月',   en:'Waxing Crescent',  poem:'細き月、若き光のはじまり。'},
+    {min:0.220, max:0.290, name:'上弦の月', en:'First Quarter',    poem:'半月かかる夜、湯気の向こうに月の弓。'},
+    {min:0.290, max:0.470, name:'十三夜月', en:'Waxing Gibbous',   poem:'十三夜、満ちる前の慎み深き光。'},
+    {min:0.470, max:0.530, name:'望月',     en:'Full Moon',        poem:'月詠の夜にあらまほしき、満ち足りた望月。'},
+    {min:0.530, max:0.710, name:'居待月',   en:'Waning Gibbous',   poem:'居待の月、ゆるりと巡る秋の宵。'},
+    {min:0.710, max:0.780, name:'下弦の月', en:'Last Quarter',     poem:'弓張月、しずかに欠けゆくしらべ。'},
+    {min:0.780, max:1.001, name:'有明月',   en:'Waning Crescent',  poem:'有明の月、夜明けまで在る最後の光。'},
+  ];
+  function phaseInfo(phase) {
+    return PHASES.find(p => phase >= p.min && phase < p.max) || PHASES[0];
+  }
+
+  function renderMoon(phase) {
+    const shadow = document.getElementById('moon-shadow');
+    // Render shadow as inset clip-path: waxing -> shadow recedes from right; waning -> shadow grows from right
+    let clipPath;
+    if (phase < 0.5) {
+      // waxing: lit grows from right side
+      const litFrac = phase * 2; // 0..1
+      // shadow covers right (1 - litFrac)
+      const right = (1 - litFrac) * 100;
+      clipPath = `inset(0 ${right}% 0 0)`;
+    } else {
+      // waning: lit recedes from right side
+      const litFrac = (1 - phase) * 2; // 1..0
+      const left = (1 - litFrac) * 100;
+      clipPath = `inset(0 0 0 ${left}%)`;
+    }
+    shadow.style.clipPath = clipPath;
+  }
+
+  function findNextFullMoon(from) {
+    let d = new Date(from);
+    for (let i = 0; i < 35; i++) {
+      const p = moonPhase(d);
+      if (p >= 0.47 && p <= 0.53) {
+        // refine to closest day to phase 0.5
+        let best = d, bestDiff = Math.abs(p - 0.5);
+        for (let j = -2; j <= 2; j++) {
+          const dt = new Date(d); dt.setDate(d.getDate() + j);
+          const diff = Math.abs(moonPhase(dt) - 0.5);
+          if (diff < bestDiff) { best = dt; bestDiff = diff; }
+        }
+        return best;
+      }
+      d.setDate(d.getDate() + 1);
+    }
+    return null;
+  }
+
+  function fmtJP(d) {
+    return `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
+  }
+  function daysUntil(d) {
+    const today = new Date(); today.setHours(0,0,0,0);
+    const t = new Date(d); t.setHours(0,0,0,0);
+    return Math.round((t - today) / 86400000);
+  }
+
+  function updateMoonForDate(date) {
+    const phase = moonPhase(date);
+    const info = phaseInfo(phase);
+    const ill = illumination(phase);
+    const panel = document.getElementById('moon-panel');
+    const nameEl = document.getElementById('moon-name');
+    const metaEl = document.getElementById('moon-meta');
+    const quoteEl = document.getElementById('moon-quote');
+    const labelEl = document.getElementById('moon-label');
+
+    labelEl.textContent = fmtJP(date) + ' の夜空';
+    nameEl.innerHTML = `${info.name} <em>${info.en}</em>`;
+    metaEl.textContent = `Illumination ${ill}% · phase ${(phase*100).toFixed(1)}%`;
+    quoteEl.textContent = `― ${info.poem}`;
+    quoteEl.classList.add('is-shown');
+    panel.classList.toggle('is-full', info.name === '望月');
+
+    renderMoon(phase);
+  }
+
+  function resetMoon() {
+    document.getElementById('moon-label').textContent = '月詠の夜空';
+    document.getElementById('moon-name').textContent = '日付をお選びください';
+    document.getElementById('moon-meta').textContent = 'Select a date to see the moon phase';
+    document.getElementById('moon-quote').classList.remove('is-shown');
+    document.getElementById('moon-panel').classList.remove('is-full');
+    renderMoon(0);
+  }
+  window.resetMoon = resetMoon;
+
+  // Init: show today + next full moon
+  const today = new Date();
+  updateMoonForDate(today);
+
+  const nextFull = findNextFullMoon(today);
+  if (nextFull) {
+    document.getElementById('next-full-date').textContent = fmtJP(nextFull);
+    const days = daysUntil(nextFull);
+    document.getElementById('next-full-rel').textContent = days === 0 ? 'tonight' : `in ${days} days`;
+    document.getElementById('pick-full').addEventListener('click', () => {
+      const iso = nextFull.toISOString().slice(0,10);
+      const inp = document.getElementById('book-date');
+      inp.value = iso;
+      updateMoonForDate(nextFull);
+      inp.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+  }
+
+  /* === Vertical Haiku Telop === */
+  const HAIKU_BY_SECTION = {
+    'hero':    { text:'山深く<br>月の湯けむり<br>ほどけけり', author:'― 月詠', light:false },
+    'concept': { text:'夜は更けて<br>湯にほどけゆく<br>百年の灯', author:'― 月詠', light:false },
+    'rooms':   { text:'名月を<br>まとう八つの<br>間のしらべ', author:'― 客室にて', light:true },
+    'cuisine': { text:'山の幸<br>器に映りし<br>今宵の月', author:'― 料理長 久保田', light:false },
+    'onsen':   { text:'夜半の湯<br>月をひと刷毛<br>すくひけり', author:'― 露天風呂', light:false },
+    'garden':  { text:'四つ時を<br>巡りて庭は<br>息をする', author:'― 四季', light:true },
+    'book':    { text:'いざ来ませ<br>月詠の宿の<br>静けさへ', author:'― ご予約', light:false },
+  };
+  const haikuEl = document.getElementById('haiku');
+  const haikuTextEl = document.getElementById('haiku-text');
+  const haikuAuthorEl = document.getElementById('haiku-author');
+  let currentSection = null;
+
+  function setHaiku(sectionId) {
+    if (!HAIKU_BY_SECTION[sectionId] || sectionId === currentSection) return;
+    currentSection = sectionId;
+    const data = HAIKU_BY_SECTION[sectionId];
+    haikuTextEl.classList.add('is-fading');
+    setTimeout(() => {
+      haikuTextEl.innerHTML = data.text;
+      haikuAuthorEl.innerHTML = data.author;
+      haikuEl.classList.toggle('on-light', data.light);
+      haikuTextEl.classList.remove('is-fading');
+    }, 400);
+  }
+
+  // Show telop after first scroll past hero
+  const haikuIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        setHaiku(e.target.id);
+        if (e.target.id !== 'hero') haikuEl.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.4 });
+  ['hero','concept','rooms','cuisine','onsen','garden','book'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) haikuIO.observe(el);
+  });
+
+  /* === Seasonal Switcher === */
+  const SEASONS = {
+    spring: {
+      img:'images/season-spring.jpg',
+      eyebrow:'春 ／ Spring',
+      title:'山桜、ほのかに咲く',
+      haiku:'やま桜<br>湯けむりほどく<br>朝のひかり。',
+      lead:'三月から四月、奈川の山々は淡き桃色に染まります。庭の山桜は満開のころ、わずか一週間。一年でもっとも儚い、極上の景色。<br><em>March to April — the mountains of Nagawa blush in pale pink. The wild cherries in our garden bloom for only a week.</em>'
+    },
+    summer: {
+      img:'images/season-summer.jpg',
+      eyebrow:'夏 ／ Summer',
+      title:'蛍の灯、川辺に',
+      haiku:'夜の川<br>蛍ひと群れ<br>月へ昇る。',
+      lead:'六月下旬、当館の裏を流れる小川は蛍の名所。露天風呂から望める、信州の夏夜の絶景です。<br><em>Late June — the stream behind our inn becomes one of Shinshu\'s finest spots for fireflies, visible from the open-air bath.</em>'
+    },
+    autumn: {
+      img:'images/season-autumn.jpg',
+      eyebrow:'秋 ／ Autumn',
+      title:'紅葉、燃えるがごとく',
+      haiku:'山眠る前の<br>ひと刷毛の朱、<br>湯にゆれる。',
+      lead:'十月から十一月、当館の庭は紅葉の盛り。露天風呂のすぐ横まで枝を伸ばす楓が、湯面に朱を落とします。<br><em>October through November — maples reach to the very edge of the open-air bath, casting crimson onto the water.</em>'
+    },
+    winter: {
+      img:'images/season-winter.jpg',
+      eyebrow:'冬 ／ Winter',
+      title:'雪明かり、しんしん',
+      haiku:'雪の夜の<br>湯けむり高く<br>月にのぼる。',
+      lead:'十二月から二月、当館は深き雪の中に沈みます。雪見の露天風呂は、月詠でしか味わえぬ冬の至福。<br><em>December to February — the inn sinks into deep snow. A snow-bath beneath the moon is found only here.</em>'
+    },
+  };
+  const gardenSec = document.getElementById('garden');
+  const sStage = document.getElementById('season-stage');
+  const sImg = document.getElementById('season-img');
+  const sEyebrow = document.getElementById('season-eyebrow');
+  const sTitle = document.getElementById('season-title');
+  const sHaiku = document.getElementById('season-haiku');
+  const sLead = document.getElementById('season-lead');
+  document.querySelectorAll('.st').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const season = btn.dataset.season;
+      const data = SEASONS[season];
+      if (!data || gardenSec.dataset.season === season) return;
+      document.querySelectorAll('.st').forEach(b => b.classList.toggle('is-active', b === btn));
+      sStage.classList.add('is-changing');
+      setTimeout(() => {
+        gardenSec.dataset.season = season;
+        sImg.style.backgroundImage = `url('${data.img}')`;
+        sEyebrow.textContent = data.eyebrow;
+        sTitle.textContent = data.title;
+        sHaiku.innerHTML = data.haiku;
+        sLead.innerHTML = data.lead;
+        sStage.classList.remove('is-changing');
+      }, 500);
+    });
+  });
+
+  document.getElementById('book-date').addEventListener('change', e => {
+    if (e.target.value) {
+      // Parse local date
+      const [y,m,d] = e.target.value.split('-').map(Number);
+      updateMoonForDate(new Date(y, m-1, d));
+    } else {
+      resetMoon();
+    }
+  });
+</script>
+</body>
+</html>
