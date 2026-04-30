@@ -1,0 +1,4 @@
+.DS_Store
+.env
+gen_*.py
+gen_*.sh
