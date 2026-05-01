@@ -12,6 +12,25 @@
 </head>
 <body>
 
+<!-- Preloader -->
+<div id="preloader">
+  <div class="preloader__moon">
+    <svg class="preloader__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="lunar-mask">
+          <circle cx="50" cy="50" r="49" fill="white"/>
+          <circle class="preloader__shadow-circle" cx="15" cy="50" r="46" fill="black"/>
+        </mask>
+      </defs>
+      <image href="images/preloader-moon.jpg" x="1" y="1" width="98" height="98"
+             preserveAspectRatio="xMidYMid slice" mask="url(#lunar-mask)"/>
+    </svg>
+    <div class="preloader__glow"></div>
+  </div>
+  <p class="preloader__name">月詠</p>
+  <p class="preloader__sub">TSUKUYOMI · est. 1923</p>
+</div>
+
 <!-- Vertical Haiku Telop -->
 <aside class="haiku-telop" id="haiku" aria-hidden="true">
   <div class="haiku-frame">
@@ -31,6 +50,7 @@
       <a href="#garden"><span class="nav-jp">四季</span><span class="nav-en">Seasons</span></a>
     </nav>
     <a href="#book" class="hd__cta">ご予約 / Reserve</a>
+    <button class="lang-btn" id="lang-btn" aria-label="言語切替">EN</button>
   </div>
 </header>
 
@@ -65,22 +85,22 @@
 <!-- CONCEPT -->
 <section class="concept" id="concept">
   <div class="concept__inner">
-    <h2 class="concept__vtitle">月のしらべ、<br>湯のいぶき。</h2>
+    <h2 class="concept__vtitle" data-jp="月のしらべ、<br>湯のいぶき。" data-en="The Moon's Melody,<br>The Breath of the Bath.">月のしらべ、<br>湯のいぶき。</h2>
     <div class="concept__body">
       <p class="kicker" style="margin-bottom:18px">― Philosophy ／ こころざし</p>
-      <p>
+      <p class="j">
         山ふところに抱かれた古き宿。創業より百年、私どもは「一夜に、一生の静けさを」という想いひとつで、暖簾を守り続けてまいりました。
       </p>
       <p class="en">
         For a century since our founding, we have kept this old inn alive with a single wish: <em>to offer, in a single night, the stillness of a lifetime.</em>
       </p>
-      <p>
+      <p class="j">
         飾り立てぬしつらえ、地の素材だけで仕立てる会席、源泉かけ流しの湯。それは贅を尽くすことではなく、ただ一夜、お客様の時間を澄ませるためのもの。
       </p>
       <p class="en">
         Unadorned interiors, kaiseki crafted only from the bounty of these mountains, and natural hot spring water flowing freely from the source — none of it is luxury for its own sake. It exists only to clarify the hours of your stay.
       </p>
-      <p>
+      <p class="j">
         日が落ちて、月が湯に映るころ。どうぞ、すべてを置いて、お越しください。
       </p>
       <div class="concept__sign">
@@ -95,7 +115,7 @@
   <div class="wrap">
     <div class="sec__head">
       <p class="kicker">― Guest Rooms ／ 客室のしつらえ</p>
-      <h2 class="sec__title">月の名を冠する、八つの間</h2>
+      <h2 class="sec__title" data-jp="月の名を冠する、八つの間" data-en="Eight Rooms Named for the Moon">月の名を冠する、八つの間</h2>
       <p class="sec__sub">— Eight rooms, each named after a phase of the moon —</p>
       <p class="sec__lead">
         全八室、すべてに異なる景色を。露天風呂付き特別室から、本間と次の間を備えた本格和室まで。<br>
@@ -104,47 +124,53 @@
     </div>
 
     <div class="rooms__grid">
-      <article class="room">
-        <div class="room__img"><img src="images/room-mochizuki.jpg" alt="望月の間"></div>
-        <div class="room__body">
-          <p class="room__cat">特別室 ／ Premier Suite</p>
-          <h3 class="room__name">望月<em>Mochizuki</em></h3>
-          <p class="room__desc">露天風呂付き特別室。檜風呂と十二畳の本間、四畳半の次の間。窓の向こうに渓谷の四季を望む、最上のしつらえ。</p>
-          <p class="room__desc-en"><em>Premier suite with private hinoki cypress open-air bath, 12-mat main room and 4.5-mat anteroom, overlooking the valley.</em></p>
-          <div class="room__meta">
-            <div class="room__price">¥98,000<small>/night · 2 guests, breakfast & dinner</small></div>
-            <span class="room__cap">～4 GUESTS</span>
+      <a href="room-mochizuki.html" class="room__link">
+        <article class="room">
+          <div class="room__img"><img src="images/room-mochizuki.jpg" alt="望月の間"></div>
+          <div class="room__body">
+            <p class="room__cat">特別室 ／ Premier Suite</p>
+            <h3 class="room__name">望月<em>Mochizuki</em></h3>
+            <p class="room__desc">露天風呂付き特別室。檜風呂と十二畳の本間、四畳半の次の間。窓の向こうに渓谷の四季を望む、最上のしつらえ。</p>
+            <p class="room__desc-en"><em>Premier suite with private hinoki cypress open-air bath, 12-mat main room and 4.5-mat anteroom, overlooking the valley.</em></p>
+            <div class="room__meta">
+              <div class="room__price">¥98,000<small>/night · 2 guests, breakfast & dinner</small></div>
+              <span class="room__cap">～4 GUESTS</span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </a>
 
-      <article class="room">
-        <div class="room__img"><img src="images/room-gengetsu.jpg" alt="弦月の間"></div>
-        <div class="room__body">
-          <p class="room__cat">上級和室 ／ Deluxe</p>
-          <h3 class="room__name">弦月<em>Gengetsu</em></h3>
-          <p class="room__desc">十畳の本間に半露天の信楽焼陶器風呂を備えた角部屋。月の出を寝そべったまま望めるよう、東向きに設えました。</p>
-          <p class="room__desc-en"><em>East-facing corner room, 10-mat main with semi-outdoor Shigaraki ceramic bath. Watch the moonrise from your futon.</em></p>
-          <div class="room__meta">
-            <div class="room__price">¥72,000<small>/night · 2 guests, breakfast & dinner</small></div>
-            <span class="room__cap">～3 GUESTS</span>
+      <a href="room-gengetsu.html" class="room__link">
+        <article class="room">
+          <div class="room__img"><img src="images/room-gengetsu.jpg" alt="弦月の間"></div>
+          <div class="room__body">
+            <p class="room__cat">上級和室 ／ Deluxe</p>
+            <h3 class="room__name">弦月<em>Gengetsu</em></h3>
+            <p class="room__desc">十畳の本間に半露天の信楽焼陶器風呂を備えた角部屋。月の出を寝そべったまま望めるよう、東向きに設えました。</p>
+            <p class="room__desc-en"><em>East-facing corner room, 10-mat main with semi-outdoor Shigaraki ceramic bath. Watch the moonrise from your futon.</em></p>
+            <div class="room__meta">
+              <div class="room__price">¥72,000<small>/night · 2 guests, breakfast & dinner</small></div>
+              <span class="room__cap">～3 GUESTS</span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </a>
 
-      <article class="room">
-        <div class="room__img"><img src="images/room-washitsu.jpg" alt="新月の間"></div>
-        <div class="room__body">
-          <p class="room__cat">本間和室 ／ Standard</p>
-          <h3 class="room__name">新月<em>Shingetsu</em></h3>
-          <p class="room__desc">八畳の本間と縁側。庭の灯籠を独り占めにする、もっとも静かな一室。お一人様にも好まれます。</p>
-          <p class="room__desc-en"><em>An 8-mat room with engawa veranda, overlooking a stone lantern in the garden. The quietest room — favored by solo travelers.</em></p>
-          <div class="room__meta">
-            <div class="room__price">¥48,000<small>/night · 2 guests, breakfast & dinner</small></div>
-            <span class="room__cap">～2 GUESTS</span>
+      <a href="room-shingetsu.html" class="room__link">
+        <article class="room">
+          <div class="room__img"><img src="images/room-washitsu.jpg" alt="新月の間"></div>
+          <div class="room__body">
+            <p class="room__cat">本間和室 ／ Standard</p>
+            <h3 class="room__name">新月<em>Shingetsu</em></h3>
+            <p class="room__desc">八畳の本間と縁側。庭の灯籠を独り占めにする、もっとも静かな一室。お一人様にも好まれます。</p>
+            <p class="room__desc-en"><em>An 8-mat room with engawa veranda, overlooking a stone lantern in the garden. The quietest room — favored by solo travelers.</em></p>
+            <div class="room__meta">
+              <div class="room__price">¥48,000<small>/night · 2 guests, breakfast & dinner</small></div>
+              <span class="room__cap">～2 GUESTS</span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </a>
     </div>
   </div>
 </section>
@@ -155,15 +181,15 @@
     <div class="cuisine__img" style="background-image:url('images/kaiseki.jpg')"></div>
     <div class="cuisine__copy">
       <p class="kicker">― Kaiseki ／ お料理</p>
-      <h2>月夜の会席</h2>
+      <h2 data-jp="月夜の会席" data-en="Kaiseki Beneath the Moon">月夜の会席</h2>
       <p class="sec__sub" style="margin-bottom:24px">— A Kaiseki Beneath the Moon —</p>
-      <p>
+      <p class="j">
         信州の山菜、戸隠の蕎麦、安曇野の岩魚。料理長 久保田は、地のものだけで一献の月を仕立てます。
       </p>
       <p class="en">
         Mountain herbs of Shinshu, Togakushi soba, char from Azumino. Chef Kubota composes each course only from what these mountains and rivers offer.
       </p>
-      <p>
+      <p class="j">
         献立はその日の朝、料理長が市場と山を歩いて決めるため、二度として同じものはございません。
       </p>
       <ul class="menu">
@@ -182,9 +208,9 @@
 <section class="onsen" id="onsen" style="background-image:url('images/onsen-interior.jpg')">
   <div class="onsen__copy">
     <p class="kicker">― Onsen ／ 温泉</p>
-    <h2>月を、湯にうつす。</h2>
+    <h2 data-jp="月を、湯にうつす。" data-en="The Moon, Reflected in the Bath.">月を、湯にうつす。</h2>
     <p class="sec__sub" style="color:var(--gold-l);margin-bottom:24px">— The Moon, Reflected in the Bath —</p>
-    <p>
+    <p class="j">
       源泉かけ流しの単純硫黄泉。檜の内湯と石組みの露天、貸切風呂を二つ。<br>
       夜更けの湯に映る、ひと刷毛の月をどうぞ。
     </p>
@@ -200,7 +226,7 @@
   <div class="wrap">
     <div class="sec__head">
       <p class="kicker">― The Four Seasons ／ 四季の景色</p>
-      <h2 class="sec__title">庭と、めぐる季節</h2>
+      <h2 class="sec__title" data-jp="庭と、めぐる季節" data-en="Garden and the Turning Seasons">庭と、めぐる季節</h2>
       <p class="sec__sub">— Garden, and the Turning Seasons —</p>
       <p class="sec__lead">
         季節をお選びください。当館の庭は、四季のしらべに合わせて、その装いを変えてまいります。<br>
@@ -234,7 +260,7 @@
 <section class="book" id="book">
   <div class="book__inner">
     <p class="kicker" style="color:var(--gold-l)">― Reservation ／ ご予約</p>
-    <h2>お部屋のご用意</h2>
+    <h2 data-jp="お部屋のご用意" data-en="Reserve Your Stay">お部屋のご用意</h2>
     <p class="sec__sub" style="color:var(--gold-l);margin-bottom:32px">— Reserve Your Stay —</p>
     <p>
       ご宿泊の希望日をお選びください。当館より折り返しご連絡を差し上げます。<br>
@@ -338,6 +364,30 @@
 </footer>
 
 <script>
+  // Language toggle
+  (function(){
+    const btn = document.getElementById('lang-btn');
+    const i18nEls = document.querySelectorAll('[data-jp][data-en]');
+    function setLang(lang) {
+      const en = lang === 'en';
+      document.body.classList.toggle('lang-en', en);
+      btn.textContent = en ? 'JP' : 'EN';
+      i18nEls.forEach(el => { el.innerHTML = en ? el.dataset.en : el.dataset.jp; });
+      localStorage.setItem('tsukuyomi-lang', lang);
+    }
+    btn.addEventListener('click', () => setLang(document.body.classList.contains('lang-en') ? 'jp' : 'en'));
+    const saved = localStorage.getItem('tsukuyomi-lang');
+    if (saved === 'en') setLang('en');
+  })();
+
+  // Preloader
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => {
+    const pre = document.getElementById('preloader');
+    pre.classList.add('is-done');
+    setTimeout(() => { pre.remove(); document.body.style.overflow = ''; }, 1000);
+  }, 2800);
+
   const hd = document.getElementById('hd');
   window.addEventListener('scroll', () => {
     hd.classList.toggle('is-scrolled', window.scrollY > 60);

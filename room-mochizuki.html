@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>望月の間 ｜ 月詠 Tsukuyomi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.rd-hero{height:100svh;background:center/cover no-repeat;position:relative;display:flex;align-items:flex-end}
+.rd-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,7,.85) 0%,rgba(10,8,7,.2) 60%,transparent 100%)}
+.rd-hero__text{position:relative;z-index:1;padding:80px 48px;width:100%}
+.rd-back{display:inline-block;font-family:var(--serif);font-size:.72rem;letter-spacing:.2em;color:rgba(255,255,255,.7);text-decoration:none;margin-bottom:32px;transition:color .3s}
+.rd-back:hover{color:var(--gold-l)}
+.rd-hero__cat{font-family:var(--serif);font-style:italic;font-size:.8rem;letter-spacing:.25em;color:var(--gold);margin-bottom:16px}
+.rd-hero__title{font-family:var(--jp-mincho);font-size:clamp(2.4rem,6vw,4.8rem);color:#fff;letter-spacing:.2em;line-height:1.1}
+.rd-hero__title em{display:block;font-style:normal;font-family:var(--serif);font-size:clamp(1rem,2.5vw,1.6rem);letter-spacing:.3em;color:var(--gold-l);margin-top:12px;font-weight:400}
+.rd-specs{background:var(--ink);padding:72px 0}
+.rd-specs__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08)}
+.rd-spec{background:var(--ink);padding:36px 32px;text-align:center}
+.rd-spec h4{font-family:var(--serif);font-style:italic;font-size:.72rem;letter-spacing:.2em;color:var(--gold);margin-bottom:12px;text-transform:uppercase}
+.rd-spec p{font-family:var(--jp-mincho);font-size:1rem;color:#fff;letter-spacing:.1em}
+.rd-body{background:var(--paper);padding:96px 0}
+.rd-body__inner{max-width:720px;margin:0 auto;padding:0 24px}
+.rd-body__en{font-family:var(--serif);font-style:italic;font-size:.8rem;letter-spacing:.2em;color:var(--gold-d);margin-bottom:24px}
+.rd-body__heading{font-family:var(--jp-mincho);font-size:1.8rem;letter-spacing:.15em;margin-bottom:32px;color:var(--ink)}
+.rd-body__text{font-family:var(--jp-mincho);font-size:.95rem;line-height:2.2;color:var(--ink-soft);margin-bottom:20px}
+.rd-amenities{background:var(--paper-2);padding:72px 0}
+.rd-amenities__title{font-family:var(--serif);font-style:italic;font-size:.8rem;letter-spacing:.2em;color:var(--gold-d);text-align:center;margin-bottom:40px}
+.rd-amenities__list{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px;list-style:none;padding:0;max-width:640px;margin:0 auto}
+.rd-amenities__list li{font-family:var(--jp-mincho);font-size:.88rem;color:var(--ink-soft);letter-spacing:.1em;display:flex;align-items:center;gap:8px}
+.rd-amenities__list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.rd-gallery{display:grid;grid-template-columns:1fr 1fr;height:560px}
+.rd-gallery div{background:center/cover no-repeat}
+.rd-cta{background:var(--ink);padding:96px 24px;text-align:center}
+.rd-cta__title{font-family:var(--jp-mincho);font-size:1.6rem;letter-spacing:.25em;color:#fff;margin-bottom:12px}
+.rd-cta__sub{font-family:var(--serif);font-style:italic;font-size:.8rem;letter-spacing:.2em;color:var(--gold);margin-bottom:48px}
+.rd-cta__btn{display:inline-block;font-family:var(--serif);font-size:.8rem;letter-spacing:.25em;color:var(--ink);background:var(--gold-l);padding:18px 56px;text-decoration:none;transition:background .3s}
+.rd-cta__btn:hover{background:#fff}
+.rd-nav{background:var(--paper);padding:48px 0;border-top:1px solid var(--line)}
+.rd-nav__inner{display:flex;align-items:center;justify-content:space-between;padding:0 48px}
+.rd-nav a{font-family:var(--serif);font-size:.78rem;letter-spacing:.15em;color:var(--ink-soft);text-decoration:none;transition:color .3s}
+.rd-nav a:hover{color:var(--gold-d)}
+.rd-nav__center{font-family:var(--serif);font-style:italic;font-size:.72rem;letter-spacing:.2em;color:var(--gold)}
+@media(max-width:768px){
+  .rd-specs__grid{grid-template-columns:repeat(2,1fr)}
+  .rd-hero__text{padding:48px 24px}
+  .rd-gallery{grid-template-columns:1fr;height:auto}
+  .rd-gallery div{height:280px}
+  .rd-nav__inner{padding:0 24px;flex-direction:column;gap:24px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header class="hd" id="hd">
+  <div class="wrap hd__row">
+    <a href="index.html" class="hd__logo">月詠<small>TSUKUYOMI · est. 1923</small></a>
+    <nav class="hd__nav">
+      <a href="index.html#rooms"><span class="nav-jp">客室</span><span class="nav-en">Rooms</span></a>
+      <a href="index.html#cuisine"><span class="nav-jp">お料理</span><span class="nav-en">Cuisine</span></a>
+      <a href="index.html#onsen"><span class="nav-jp">温泉</span><span class="nav-en">Onsen</span></a>
+    </nav>
+    <a href="index.html#reserve" class="hd__cta">ご予約 / RESERVE</a>
+    <button class="hd__hamburger" id="hd-hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="rd-hero" style="background-image:url('images/room-mochizuki.jpg')">
+  <div class="rd-hero__text">
+    <div class="wrap">
+      <a href="index.html#rooms" class="rd-back">← 客室一覧</a>
+      <p class="rd-hero__cat">特別室 ／ Premier Suite</p>
+      <h1 class="rd-hero__title">望月の間<em>MOCHIZUKI</em></h1>
+    </div>
+  </div>
+</section>
+
+<section class="rd-specs">
+  <div class="wrap">
+    <div class="rd-specs__grid">
+      <div class="rd-spec"><h4>Room Size</h4><p>十二畳＋四畳半</p></div>
+      <div class="rd-spec"><h4>Capacity</h4><p>～4名</p></div>
+      <div class="rd-spec"><h4>Bath</h4><p>露天檜風呂</p></div>
+      <div class="rd-spec"><h4>Rate</h4><p>¥98,000<small style="font-size:.6em;color:var(--gold)"> /泊</small></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rd-body">
+  <div class="rd-body__inner">
+    <p class="rd-body__en">― The most prestigious room, named after the full moon</p>
+    <h2 class="rd-body__heading">満ちた月を、独り占めに。</h2>
+    <p class="rd-body__text">十二畳の本間と四畳半の次の間、二間続きの間取り。檜の香りが漂う露天風呂からは、渓谷を流れる沢の音が届きます。</p>
+    <p class="rd-body__text">夜、外風呂に身を沈めれば、木々の梢の向こうに月が昇ります。望月とは満月のこと。もっとも明るく、もっとも丸い夜の光を、この部屋だけに灯しています。</p>
+    <p class="rd-body__text"><em style="font-family:var(--serif);font-style:italic;font-size:.88rem;color:var(--ink-soft)">A 12-mat main room adjoining a 4.5-mat anteroom, with a private open-air hinoki cypress bath overlooking the valley. Named for the full moon — the brightest, roundest light of the night.</em></p>
+  </div>
+</section>
+
+<section class="rd-amenities">
+  <div class="wrap">
+    <p class="rd-amenities__title">― Amenities</p>
+    <ul class="rd-amenities__list">
+      <li>露天檜風呂（専用）</li>
+      <li>内風呂（御影石）</li>
+      <li>床暖房</li>
+      <li>床の間・違い棚</li>
+      <li>縁側テラス</li>
+      <li>冷暖房完備</li>
+      <li>ウェルカムスイーツ</li>
+      <li>浴衣・丹前</li>
+      <li>空気清浄機</li>
+      <li>朝夕二食付き</li>
+    </ul>
+  </div>
+</section>
+
+<div class="rd-gallery">
+  <div style="background-image:url('images/room-mochizuki.jpg')" data-glb="images/room-mochizuki.jpg"></div>
+  <div style="background-image:url('images/garden.jpg')" data-glb="images/garden.jpg"></div>
+</div>
+
+<section class="rd-cta">
+  <p class="rd-cta__title">望月の間 ご予約</p>
+  <p class="rd-cta__sub">¥98,000 / 泊（2名・朝夕食付）</p>
+  <a href="index.html#reserve" class="rd-cta__btn">RESERVE THIS ROOM</a>
+</section>
+
+<nav class="rd-nav">
+  <div class="rd-nav__inner">
+    <span></span>
+    <span class="rd-nav__center"><a href="index.html#rooms">← 客室一覧へ戻る</a></span>
+    <a href="room-gengetsu.html">弦月の間 →</a>
+  </div>
+</nav>
+
+<footer class="ft">
+  <div class="wrap ft__row">
+    <div class="ft__col"><a href="index.html" class="hd__logo">月詠<small>TSUKUYOMI · est. 1923</small></a></div>
+    <div class="ft__col"><h4>月詠</h4><ul><li>長野県・信州</li><li>全八室</li></ul></div>
+  </div>
+  <div class="wrap ft__bottom"><span>© 2026 TSUKUYOMI RYOKAN</span><span>― FICTIONAL BRAND PORTFOLIO ―</span></div>
+</footer>
+
+<div class="glb" id="glb" role="dialog" aria-modal="true">
+  <button class="glb__close" aria-label="閉じる">✕</button>
+  <button class="glb__prev" aria-label="前へ">&#8249;</button>
+  <img class="glb__img" src="" alt="">
+  <button class="glb__next" aria-label="次へ">&#8250;</button>
+  <p class="glb__counter"></p>
+</div>
+<script>
+const hd=document.getElementById('hd');
+window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));
+const hamburger=document.getElementById('hd-hamburger'),mobileNav=document.querySelector('.hd__nav');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('is-open');mobileNav.classList.toggle('is-open');document.body.style.overflow=mobileNav.classList.contains('is-open')?'hidden':'';});
+mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('is-open');mobileNav.classList.remove('is-open');document.body.style.overflow='';}));
+(function(){
+  const items=[...document.querySelectorAll('[data-glb]')];
+  if(!items.length)return;
+  const glb=document.getElementById('glb'),img=glb.querySelector('.glb__img'),counter=glb.querySelector('.glb__counter');
+  let cur=0;
+  function show(i){cur=(i+items.length)%items.length;img.src=items[cur].dataset.glb;counter.textContent=(cur+1)+' / '+items.length;glb.classList.add('is-open');document.body.style.overflow='hidden';}
+  function hide(){glb.classList.remove('is-open');document.body.style.overflow='';}
+  items.forEach((el,i)=>el.addEventListener('click',()=>show(i)));
+  glb.querySelector('.glb__close').addEventListener('click',hide);
+  glb.querySelector('.glb__prev').addEventListener('click',()=>show(cur-1));
+  glb.querySelector('.glb__next').addEventListener('click',()=>show(cur+1));
+  glb.addEventListener('click',e=>{if(e.target===glb)hide();});
+  document.addEventListener('keydown',e=>{if(!glb.classList.contains('is-open'))return;if(e.key==='Escape')hide();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+})();
+</script>
+</body>
+</html>

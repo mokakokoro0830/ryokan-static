@@ -130,6 +130,7 @@ ul{list-style:none}
 /* === Rooms === */
 .rooms{background:var(--paper)}
 .rooms__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:32px}
+.room__link{display:block;text-decoration:none;color:inherit}
 .room{background:var(--paper-2);transition:transform .4s,box-shadow .4s;cursor:pointer}
 .room:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(26,20,16,0.12)}
 .room__img{aspect-ratio:4/5;overflow:hidden;background:var(--kinari)}
@@ -247,7 +248,7 @@ ul{list-style:none}
 .book{background:var(--sumi);color:var(--paper);padding:140px 0}
 .book__inner{max-width:680px;margin:0 auto;text-align:center;padding:0 32px}
 .book h2{font-family:var(--jp-mincho);font-size:clamp(2rem,4vw,3rem);font-weight:500;letter-spacing:0.25em;margin:14px 0 28px}
-.book p{font-family:var(--jp-mincho);font-size:1rem;line-height:2.4;letter-spacing:0.1em;color:rgba(244,236,216,0.82);margin-bottom:48px}
+.book__inner > p{font-family:var(--jp-mincho);font-size:1rem;line-height:2.4;letter-spacing:0.1em;color:rgba(244,236,216,0.82);margin-bottom:48px}
 /* === Moon Phase Panel === */
 .moon-panel{
   display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;
@@ -397,3 +398,83 @@ ul{list-style:none}
   .ft__row{grid-template-columns:1fr}
   .hero__meta{flex-wrap:wrap;gap:20px}
 }
+
+/* === Preloader === */
+#preloader{
+  position:fixed;inset:0;z-index:9999;
+  background:#0A0807;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:28px;
+  transition:opacity 1s ease;
+}
+#preloader.is-done{opacity:0;pointer-events:none}
+.preloader__moon{position:relative;width:130px;height:130px}
+.preloader__svg{width:100%;height:100%;display:block}
+.preloader__shadow-circle{
+  animation:lunarPhase 2.6s cubic-bezier(.45,0,.2,1) .3s forwards;
+}
+.preloader__glow{
+  position:absolute;inset:-30px;border-radius:50%;
+  background:radial-gradient(circle,rgba(217,190,130,0.35) 0%,transparent 65%);
+  animation:preloaderGlow 2.6s ease .3s forwards;
+}
+@keyframes lunarPhase{
+  from{transform:translateX(0)}
+  to  {transform:translateX(145px)}
+}
+@keyframes preloaderGlow{
+  0%  {opacity:.2;transform:scale(.8)}
+  100%{opacity:1;transform:scale(1.25)}
+}
+.preloader__name{
+  font-family:var(--jp-mincho);font-size:2.6rem;
+  letter-spacing:.45em;color:var(--gold-l);
+  opacity:0;animation:preloaderFadeUp .7s ease .05s forwards;
+}
+.preloader__sub{
+  font-family:var(--serif);font-style:italic;font-size:.78rem;
+  letter-spacing:.28em;color:var(--gold);
+  opacity:0;animation:preloaderFadeUp .7s ease .3s forwards;
+}
+@keyframes preloaderFadeUp{
+  from{opacity:0;transform:translateY(10px)}
+  to  {opacity:1;transform:translateY(0)}
+}
+
+/* Modal / Lightbox */
+.glb{position:fixed;inset:0;z-index:9998;background:rgba(10,8,7,.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.glb.is-open{opacity:1;pointer-events:all}
+.glb__img{max-width:90vw;max-height:88vh;object-fit:contain;transform:scale(.97);transition:transform .35s ease}
+.glb.is-open .glb__img{transform:scale(1)}
+.glb__close{position:absolute;top:24px;right:32px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;opacity:.55;transition:opacity .2s;line-height:1;padding:8px}
+.glb__close:hover{opacity:1}
+.glb__prev,.glb__next{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:3rem;cursor:pointer;opacity:.4;transition:opacity .2s;padding:16px 24px}
+.glb__prev{left:8px}.glb__next{right:8px}
+.glb__prev:hover,.glb__next:hover{opacity:1}
+.glb__counter{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-size:.7rem;letter-spacing:.25em;color:rgba(255,255,255,.4)}
+[data-glb]{cursor:zoom-in;}
+
+/* Language toggle */
+.lang-btn{font-family:var(--serif);font-size:.68rem;letter-spacing:.2em;background:none;border:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.8);padding:5px 12px;cursor:pointer;transition:all .3s;margin-left:12px;flex-shrink:0}
+.hd.is-scrolled .lang-btn{border-color:rgba(26,20,16,.35);color:var(--ink-soft)}
+.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+/* EN mode – nav */
+body.lang-en .hd__nav a .nav-jp{display:none}
+body.lang-en .hd__nav a .nav-en{font-size:.85rem;font-style:normal;color:inherit}
+body.lang-en .hd__nav a:hover .nav-en{color:var(--gold-l)}
+
+/* EN mode – hero */
+body.lang-en .hero__title{display:none}
+body.lang-en .hero__en{font-size:clamp(3rem,7vw,6rem);letter-spacing:.2em;color:#fff;font-style:normal;margin-bottom:28px}
+body.lang-en .hero__lead{display:none}
+body.lang-en .hero__lead-en{font-size:1rem;line-height:2.4;letter-spacing:.08em;color:rgba(244,236,216,.85);margin-top:0;font-style:normal}
+
+/* EN mode – paragraphs */
+body.lang-en .j{display:none!important}
+body.lang-en .en{font-size:.95rem;line-height:2;letter-spacing:.04em;color:inherit;font-style:normal;margin-top:0}
+body.lang-en .cuisine__copy .en,body.lang-en .onsen__copy .en{color:rgba(244,236,216,.85)}
+
+/* EN mode – room cards */
+body.lang-en .room__desc{display:none}
+body.lang-en .room__desc-en{font-size:.88rem;line-height:1.9;color:var(--ink-soft);opacity:1;margin-top:0;font-style:normal;letter-spacing:.03em}
