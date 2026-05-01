@@ -2,3 +2,9 @@
 .env
 gen_*.py
 gen_*.sh
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
